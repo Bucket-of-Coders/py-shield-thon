@@ -59,18 +59,7 @@ def str_hex(files, out, level, extr):
                 file_out.write('\nsys.path.insert(0,parentdir)')
                 file_out.write('\nimport extract\n')
                 if extr:
-                    hexing = ''.join(x for x in hex_arr).replace('\\x74','\\x90').replace('\\x72','\\x53'). \
-                                                          replace('\\x65','\\x12').replace('\\x0a','\\xc7'). \
-                                                          replace('\\x20','\\xcc').replace('\\x28','\\x97'). \
-                                                          replace('\\x78','\\x01').replace('\\x6e','\\x54'). \
-                                                          replace('\\x69','\\x92').replace('\\x70','\\xc9'). \
-                                                          replace('\\x4a','\\x7c').replace('\\x41','\\xc2'). \
-                                                          replace('\\x6f','\\xd6').replace('\\x61','\\xd7'). \
-                                                          replace('\\x55','\\xf9').replace('\\x41','\\xa9'). \
-                                                          replace('\\x63','\\xe1').replace('\\x43','\\xe8'). \
-                                                          replace('\\x73','\\xde').replace('\\x79','\\xd0'). \
-                                                          replace('\\x33','\\xd8').replace('\\x36','\\x21'). \
-                                                          replace('\\x31','\\xce').replace('\\x37','\\x40')
+                    hexing = ''.join(x for x in hex_arr)
                     file_out.write('exec(extract.hexing("{}"))'.format(hexing))
                 else:
                     hexing = ''.join(x for x in hex_arr)
